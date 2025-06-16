@@ -25,6 +25,15 @@ dependencies {
 		exclude group: 'org.apache.tomcat', module: 'tomcat-jdbc'
 	}
 
+	//H2 database dependencies
+
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+
+	runtimeOnly("com.h2database:h2")
+
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+
 	//snowflakes
 	implementation 'net.snowflake:snowflake-jdbc:3.13.16'
 	implementation 'net.snowflake:snowflake-common:5.1.4'
